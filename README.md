@@ -8,3 +8,5 @@ https://www.hackerrank.com/challenges/balanced-brackets/problem
 https://www.hackerrank.com/challenges/simple-text-editor/problem
 https://www.hackerrank.com/challenges/waiter/problem
 https://www.hackerrank.com/challenges/waiter/problem #List all primeNumbers
+https://www.hackerrank.com/challenges/find-maximum-index-product/problem
+https://www.hackerrank.com/challenges/find-maximum-index-product/problem # Get closet maximum for a number on left and right
