@@ -11,3 +11,4 @@ https://www.hackerrank.com/challenges/waiter/problem #List all primeNumbers
 https://www.hackerrank.com/challenges/find-maximum-index-product/problem
 https://www.hackerrank.com/challenges/find-maximum-index-product/problem # Get closet maximum for a number on left and right
 https://www.hackerrank.com/challenges/find-the-running-median/problem
+https://www.hackerrank.com/challenges/sparse-arrays/problem
