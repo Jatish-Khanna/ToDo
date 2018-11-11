@@ -73,6 +73,7 @@ class Solution {
 		return current;
 	}
 
+	// Logic to merge two Linked list
 	private static Node merge(Node current, Node right) {
 		if (right == null)
 			return current;
