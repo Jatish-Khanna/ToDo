@@ -86,4 +86,22 @@ class Solution {
 		return sizeOfLoop;
 	}
 
+	// Using Hashing remove the loop
+	private static int detectAndRemoveLoopUsingHash(Node node) {
+		HashMap<Node, Integer> dictionary = new HashMap<>();
+		int index = 0;
+		Node previous = null;
+		while (node != null && !dictionary.containsKey(node)) {
+			dictionary.put(node, index);
+			previous = node;
+			node = node.next;
+			index++;
+		}
+		if (previous != null) {
+			previous.next = null;
+		}
+		return dictionary.getOrDefault(node, -1);
+	}
+
+
 }
