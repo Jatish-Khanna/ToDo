@@ -10,16 +10,18 @@ import java.util.stream.Collectors;
 public class BestHotelListing {
 
 	private static int[] getHotelsWithBestReviews(String keywords, int[] hotelIds, String[] reviews) {
-		Set<String> findWords = Arrays.stream(keywords.split(" ")).map(String::toLowerCase).collect(Collectors.toSet());
+		Set<String> findWords = Arrays.stream(keywords.split(" "))
+				.map(word -> word.replaceAll("\\W", "")).map(String::toLowerCase)
+				.collect(Collectors.toSet());
 
 		Map<Integer, Long> hotelMapping = new HashMap<>();
 
 		for (int index = 0; index < hotelIds.length; index++) {
-			long count = Arrays.stream(reviews[index].split(" ")).map(word -> word.replace(".,]", ""))
+			long count = Arrays.stream(reviews[index].split(" ")).map(word -> word.replaceAll("\\W", ""))
 					.map(String::toLowerCase).filter(findWords::contains).count();
 			hotelMapping.put(hotelIds[index], hotelMapping.getOrDefault(hotelIds[index], 0L) + count);
 		}
-
+		
 		List<Hotel> hotelList = new ArrayList<>();
 		for (Map.Entry<Integer, Long> entry : hotelMapping.entrySet()) {
 			hotelList.add(new Hotel(entry.getKey(), entry.getValue()));
