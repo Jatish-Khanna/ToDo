@@ -57,7 +57,10 @@ public class BestHotelListing {
 	}
 
 	public static void main(String[] args) {
-//		System.out.println(getHotelsWithBestReviews());
+		int[] hotelIds = { 1, 2, 1, 2, 3 };
+		String[] reviews = { "best good", "better", "awesome", "bad", "Good better best best" };
+		Arrays.stream(getHotelsWithBestReviews("Good, awesome best better", hotelIds, reviews))
+				.forEach(System.out::println);
 	}
 
 }
