@@ -1,2 +1,19 @@
 LSM trees can handle higher write workloads and 
 B-trees are good for high read workload. 
+
+
+
+
+
+replication of data.
+Single master slave replication : All writes go to one node, called master. 
+    The changes in master node are replicated to other nodes, called slaves. Read requests can go to either master or slave.
+    
+Many master replication: Instead of writes going to one master, 
+      they can go to many masters. Masters can then replicate changes made to their data stores to other slaves nodes. 
+      Read requests can go to either master or slave.
+
+No master replication: There are no master and slaves in this setup. 
+      Writes and reads can be sent to any node.
+
+Note: An important detail worth mentioning is the manner in which replication happens. It can either be synchronous or asynchronous.
