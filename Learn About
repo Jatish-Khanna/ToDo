@@ -1,0 +1,2 @@
+LSM trees can handle higher write workloads and 
+B-trees are good for high read workload. 
